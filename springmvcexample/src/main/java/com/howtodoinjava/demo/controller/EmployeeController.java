@@ -11,8 +11,7 @@ import com.howtodoinjava.demo.service.EmployeeManager;
 
 @Controller
 @RequestMapping("/employee-module")
-public class EmployeeController 
-{
+public class EmployeeController {
 	
 	private static final Logger logger = Logger.getLogger(EmployeeController.class);
 	
@@ -26,8 +25,6 @@ public class EmployeeController
 			logger.debug("getWelcome is executed!");
 		}
 		
-		//logs exception
-		logger.error("This is Error message", new Exception("Testing"));
 		
 		model.addAttribute("employees", manager.getAllEmployees());
 		return "employeesListDisplay";
